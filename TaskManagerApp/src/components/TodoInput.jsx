@@ -17,7 +17,7 @@ function TodoInput({onAddTodo}){
                 <input
                 value={newtext}
                 onChange={(e) =>setNewText(e.target.value)}
-                placeholder="Add a todo"
+                placeholder="Add a todo..."
                 />
                 <button type='submit'>Add</button>
             </form>
