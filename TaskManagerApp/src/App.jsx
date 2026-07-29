@@ -19,6 +19,10 @@ function App(){
     setTodos(todos.filter(todo => todo.id !== id ));
   }
 
+  function editTodo(id, newtext){
+    setTodos(todos.map(todo => todo.id ===id ?{...todo, text: newtext}: todo));
+  }
+
   return(
     <div>
       <h1>Task manager</h1>
@@ -27,6 +31,7 @@ function App(){
       todos={todos}
       onToggle={toggleTodo}
       onDelete={deleteTodo}
+      onEdit={editTodo}
       ></TodoList>
     </div>
   )
