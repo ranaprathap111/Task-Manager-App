@@ -1,3 +1,5 @@
+import './App.css'
+
 import { useState } from "react";
 
 import TodoInput from "./components/TodoInput";
@@ -34,7 +36,7 @@ function App(){
   })
 
   return(
-    <div>
+    <div className="app">
       <h1>Task manager</h1>
       <TodoInput onAddTodo={addTodo}></TodoInput>
       <FilterBar filter={filter} setFilter={setFilter}></FilterBar>

@@ -14,7 +14,7 @@ function TodoItem({text, completed, onToggle, onDelete, onEdit}){
 
     if(isEditing){
         return(
-            <div>
+            <div className="todo-item">
               <input
               value={editText}
               onChange={(e) => setEditText(e.target.value)}
@@ -26,7 +26,7 @@ function TodoItem({text, completed, onToggle, onDelete, onEdit}){
     }
 
     return(
-        <div>
+        <div className="todo-item">
             <input type="checkbox"
             checked={completed} 
             onChange={onToggle}/>
